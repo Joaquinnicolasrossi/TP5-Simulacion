@@ -372,7 +372,7 @@ ESCENARIOS = {
         **PARAMS_TP4,
         'cant_seniors': 1,
         'cant_juniors': 2,
-        'cap_arrepentimiento_qb': 8,
+        'cap_arrepentimiento_qb': 5,
         'politica_atencion': 'Polivalente'
     },
     "Escenario 2 (Peor / Crisis de Demanda)": {

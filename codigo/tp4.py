@@ -11,7 +11,7 @@ Original file is located at
 **Objetivo:** Procesamiento de datos de guardia hospitalaria, ajuste de FDP (IA y TA) y simulación por Transformada Inversa.
 """
 
-!pip install numpy fitter pandas matplotlib seaborn scipy
+# !pip install numpy fitter pandas matplotlib seaborn scipy
 
 """# 1. IMPORTACIÓN DE LIBRERÍAS"""
 
@@ -30,7 +30,7 @@ plt.rcParams['font.size'] = 10
 
 """#2. CARGA DE DATOS (GOOGLE COLAB)"""
 
-archivo_csv = "ER Wait Time Dataset.csv"
+archivo_csv = "../datos/ER Wait Time Dataset.csv"
 ruta_drive = "/content/drive/MyDrive/TP4/Datos/ER Wait Time Dataset.csv"
 
 if os.path.exists(archivo_csv):
