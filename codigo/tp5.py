@@ -452,6 +452,8 @@ if __name__ == "__main__":
     m_peor = df_resultados[df_resultados['Escenario'] == "Escenario 2 (Peor / Crisis de Demanda)"].mean(numeric_only=True)
     m_mejor = df_resultados[df_resultados['Escenario'] == "Escenario 3 (Mejor / Optimizado)"].mean(numeric_only=True)
 
+    reduccion_pct = ((m_act['PTE_Critical_min'] - m_mejor['PTE_Critical_min']) / m_act['PTE_Critical_min']) * 100
+
     print("\n" + "="*80)
     print("SÍNTESIS COMPARATIVA PARA EL DECISOR:")
     print("="*80)
@@ -460,6 +462,6 @@ if __name__ == "__main__":
     print(f"2. Peor Escenario (2 Juniors, Crisis de Arribos):")
     print(f"   - El sistema colapsa: La espera crítica trepa a {m_peor['PTE_Critical_min']:.2f} min y el abandono en baja prioridad llega al {m_peor['Tasa_Abandono_%']:.1f}%.")
     print(f"3. Mejor Escenario (2 Seniors + 2 Juniors, Política Dedicada):")
-    print(f"   - Erradicación del riesgo vital: La espera crítica baja a {m_mejor['PTE_Critical_min']:.2f} min (reducción de más del 80%).")
+    print(f"   - Erradicación del riesgo vital: La espera crítica baja a {m_mejor['PTE_Critical_min']:.2f} min (reducción del {reduccion_pct:.1f}%).")
     print(f"   - La guardia mantiene una utilización equilibrada ({100 - m_mejor['PTO_Promedio_%']:.1f}% de ocupación médica).")
     print("="*80)
